@@ -15,5 +15,7 @@ test.only("second test",async({page})=>{
     await page.screenshot({path:"geeksforgeeks.png"});
     const title = await page.title();
     console.log(title);
-    expect(title).toBe("GeeksforGeeks | Your All-in-One Learning Portal");
+   // expect(title).toBe("GeeksforGeeks | Your All-in-One Learning Portal");
+
+    await expect(page).toHaveTitle("GeeksforGeeks | Your All-in-One Learning Portal")
 });
