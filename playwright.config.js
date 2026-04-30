@@ -10,7 +10,7 @@ const config = {
 
   use: {
     browserName: 'chromium',
-    headless: true,
+    headless: false,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     video: 'off',
