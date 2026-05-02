@@ -49,7 +49,8 @@ test ("Web UI E2E automation of rahulshettyacademy",async({browser})=>{
     await coupon_text.fill(coupon_text_value);
     await year_dropdown.selectOption({ label: '27' });
     await apply_coupon_button.click();
-    await country_details.fill("India");
+   await page.locator("[placeholder*='Country']").pressSequentially("ind", { delay: 150 });
+    await page.click('i.fa.fa-search:has-text(" India")');
     //await country_value.click();
     const test_data_value = await get_user_details.textContent()
     await expect(test_data_value).toEqual(usename_details);
